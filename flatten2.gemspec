@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "flatten2.gemspec",
      "lib/flatten2.rb",
      "lib/flatten2/array.rb",
      "spec/flatten2/array_spec.rb",
