@@ -14,15 +14,32 @@ If you don't have git installed, you can also download the source code as a ZIP 
 
 To make sure your local copy is working correctly, cd into the new flatten2 directory and run "rake spec".  All tests should pass.
 
-Next, you'll need to install the gem locally.  You can do this by running "sudo rake install" inside the flatten2 directory (or just "rake install" if you don't need sudo to install gems).
+At this point you have the code to read (see the "Files of interest" section below), and you've confirmed that it's working.  If you'd also like to use the Array#flatten2 method in irb or a Ruby script, you'll have to install the gem.  You can do this by running "sudo rake install" from inside the flatten2 directory.
 
-Once the gem is installed, you can test the new #flatten2 method in irb or your own Ruby script, but you'll need to first run this Ruby code:
+After installing the gem, you just have to run this code to make the Array#flatten2 available:
 
   require 'rubygems'
   gem 'flatten2'
   require 'flatten2'
 
-After running this code, the Array#flatten2 method will be available.
+= Example Usage
+
+  # flatten2_example.rb
+  require 'rubygems'
+  gem 'flatten2'
+  require 'flatten2'
+
+  empty = []
+  puts empty.flatten2.inspect          # => []
+  
+  flat = [1, 2, 3, 4]
+  puts flat.flatten2.inspect           # => [1, 2, 3, 4]
+
+  shallow_nested = [1, [2, 3], 4]
+  puts shallow_nested.flatten2.inspect # => [1, 2, 3, 4]
+
+  deeper_nested = [1, [2, [3, [4, []], []]], [5, [6]]]
+  puts deeper_nested.flatten2.inspect  # => [1, 2, 3, 4, 5, 6]
 
 = Files of interest
 
