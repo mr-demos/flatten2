@@ -2,6 +2,14 @@
 
 This plugin provides Array#flatten2, my own implementation of the standard #flatten method.
 
+To test it out install the gem, then run the following in your Ruby script or in irb:
+
+  require 'rubygems'
+  gem 'flatten2'
+  require 'flatten2'
+
+This will give you the Array#flatten2 method.  You can also run the specs to confirm that it is working correctly.
+
 == Copyright
 
 Copyright (c) 2010 Matt Royal. See LICENSE for details.

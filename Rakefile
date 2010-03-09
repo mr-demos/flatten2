@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "flatten2"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Provides Array#flatten2, my own implementation of #flatten}
+    gem.description = %Q{Provides Array#flatten2, my own implementation of #flatten}
     gem.email = "mroyal@gmail.com"
     gem.homepage = "http://github.com/mr-demos/flatten2"
     gem.authors = ["Matt Royal"]
