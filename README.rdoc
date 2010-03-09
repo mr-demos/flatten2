@@ -2,13 +2,39 @@
 
 This plugin provides Array#flatten2, my own implementation of the standard #flatten method.
 
-To test it out install the gem, then run the following in your Ruby script or in irb:
+= Instructions
+
+Though you probably don't need it, I'll walk through how to test this just to make things easy.
+
+First you need to clone the git repo:
+
+  git clone git://github.com/mr-demos/flatten2.git
+
+If you don't have git installed, you can also download the source code as a ZIP or TAR file using the "Download Source" button on the Github page at http://github.com/mr-demos/flatten2/tree/
+
+To make sure your local copy is working correctly, cd into the new flatten2 directory and run "rake spec".  All tests should pass.
+
+Next, you'll need to install the gem locally.  You can do this by running "sudo rake install" inside the flatten2 directory (or just "rake install" if you don't need sudo to install gems).
+
+Once the gem is installed, you can test the new #flatten2 method in irb or your own Ruby script, but you'll need to first run this Ruby code:
 
   require 'rubygems'
   gem 'flatten2'
   require 'flatten2'
 
-This will give you the Array#flatten2 method.  You can also run the specs to confirm that it is working correctly.
+After running this code, the Array#flatten2 method will be available.
+
+= Files of interest
+
+For the sake of reviewing the code, the main file you'll care about is lib/flatten2/array.rb.  This provides the Flatten2::Array module, which is included into Array (by the lib/flatten2.rb file), which provides the #flatten2 method to Array.
+
+You can find the spec tests for #flatten2 in spec/flatten2/array_spec.rb
+
+Please let me know if you have any questions about the code.
+
+= Contact Info
+
+mroyal@gmail.com
 
 == Copyright
 
